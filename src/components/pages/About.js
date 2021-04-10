@@ -13,6 +13,7 @@ function About() {
           <AboutDetails>
             <i className="fas fa-star" /> Esse projeto foi Desenvolvido com 
             intuito de você adicionar os filmes que já assistiu ou filmes favoritos para assistir mais tarde.
+            Para fazer a edição do firebase, entrar no favoritos e desmarcar o coração selecionado.
             </AboutDetails>
             <AboutInfo>Desenvolvido por:</AboutInfo>
             <OtherDetails>
