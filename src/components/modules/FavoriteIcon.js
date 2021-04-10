@@ -19,18 +19,18 @@ function FavoriteIcon({ movie }) {
 
             console.log(movie)
             let list = []
-            
+
             const response = await getData(movie.id.toString())
-            console.log(response.uid.length)
-            console.log(response.uid)
-            console.log(currentUser.uid)
-            if(response.uid.length > 0) {
+
+            console.log(response)
+
+            if (response !== null) {
                 list.push(currentUser.uid)
                 response.uid.forEach(m => {
                     console.log(m)
                     list.push(m)
                     console.log(list)
-                });  
+                });
             } else {
                 list.push(currentUser.uid)
             }
@@ -38,6 +38,9 @@ function FavoriteIcon({ movie }) {
             movie.uid = list
             console.log(list)
             console.log(movie)
+
+
+            console.log(movie.favorite)
 
             if (movie.favorite) {
                 const newList = list.filter(i => i !== currentUser.uid)
@@ -57,7 +60,7 @@ function FavoriteIcon({ movie }) {
             } else {
 
 
-                
+
                 console.log(response)
                 setFavorite(true)
 
